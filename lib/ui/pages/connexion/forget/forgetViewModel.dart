@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:hustler/services/GetIt.dart';
+import 'package:hustler/services/authService.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:stacked/stacked.dart';
+
+class ForgetViewModel extends BaseViewModel {
+  String email = '';
+  final formKey = GlobalKey<FormState>();
+  final RoundedLoadingButtonController btnController =
+      RoundedLoadingButtonController();
+
+  AuthService authService = getIt.get<AuthService>();
+}
