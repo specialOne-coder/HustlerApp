@@ -3,7 +3,6 @@ import 'dart:convert';
 
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:hustler/constants.dart';
@@ -28,11 +27,11 @@ class AuthService {
     try {
       var url = Uri.parse(initUrl + 'login');
       var response = await client.post(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
+        'Content-Type': 'application/json;charSet=UTF-8'
+      }, body: jsonEncode(<String, String>{
         'email': email,
         'password': password
-      });
+      }));
       if (response.statusCode == 200) {
         final parsed = jsonDecode(response.body);
         await prefs.setString('jwt', parsed['token']);
@@ -43,8 +42,8 @@ class AuthService {
       } else {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Invalid username or password ',
           btnCancelOnPress: () {},
@@ -71,10 +70,10 @@ class AuthService {
     try {
       var url = Uri.parse(initUrl + 'forget');
       var response = await client.put(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
+        'Content-Type': 'application/json;charSet=UTF-8'
+      }, body: jsonEncode(<String, String>{
         'email': email,
-      });
+      }));
       print(response.body);
       if (response.statusCode == 200) {
         Fluttertoast.showToast(
@@ -95,8 +94,8 @@ class AuthService {
       } else if (response.statusCode == 300) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Invalid email ',
           btnCancelOnPress: () {},
@@ -104,8 +103,8 @@ class AuthService {
       } else {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Email connection Error ',
           btnCancelOnPress: () {},
@@ -132,10 +131,10 @@ class AuthService {
     try {
       var url = Uri.parse(initUrl + 'resendForget');
       var response = await client.post(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
+        'Content-Type': 'application/json;charSet=UTF-8'
+      }, body: jsonEncode(<String, String>{
         'email': email,
-      });
+      }));
       print(response.body);
       if (response.statusCode == 200) {
         this.success = true;
@@ -191,11 +190,11 @@ class AuthService {
     try {
       var url = Uri.parse(initUrl + 'updatePass');
       var response = await client.put(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
+        'Content-Type': 'application/json;charSet=UTF-8'
+      }, body: jsonEncode(<String, String>{
         'forgetCode': code,
         'newPassword': newPassword
-      });
+      }));
       print(response.body);
       if (response.statusCode == 200) {
         Fluttertoast.showToast(
@@ -216,8 +215,8 @@ class AuthService {
       } else if (response.statusCode == 300) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Incorrect code ',
           btnCancelOnPress: () {},
@@ -248,14 +247,16 @@ class AuthService {
     var client = http.Client();
     try {
       var url = Uri.parse(initUrl + 'register');
-      var response = await client.post(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
-        'pseudo': pseudo,
-        'email': email,
-        'userType': userType,
-        'password': password
-      });
+      var response = await client.post(url,
+          headers: <String, String>{
+            'Content-Type': 'application/json;charSet=UTF-8'
+          },
+          body: jsonEncode(<String, String>{
+            'pseudo': pseudo,
+            'email': email,
+            'userType': userType,
+            'password': password
+          }));
       print(response.body);
       if (response.statusCode == 200) {
         Fluttertoast.showToast(
@@ -277,8 +278,8 @@ class AuthService {
         final parsed = jsonDecode(response.body);
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: '${parsed["pseudo"] + parsed["email"] + parsed["password"]} ',
           btnCancelOnPress: () {},
@@ -315,10 +316,10 @@ class AuthService {
     try {
       var url = Uri.parse(initUrl + 'resend');
       var response = await client.post(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
+        'Content-Type': 'application/json;charSet=UTF-8'
+      }, body: jsonEncode(<String, String>{
         'email': email,
-      });
+      }));
       print(response.body);
       if (response.statusCode == 200) {
         this.success = true;
@@ -374,10 +375,10 @@ class AuthService {
     try {
       var url = Uri.parse(initUrl + 'verified');
       var response = await client.put(url, headers: <String, String>{
-        'Context-Type': 'application/json;charSet=UTF-8'
-      }, body: <String, String>{
+        'Content-Type': 'application/json;charSet=UTF-8'
+      }, body: jsonEncode(<String, String>{
         'verifiedCode': code,
-      });
+      }));
       print(response.body);
       if (response.statusCode == 200) {
         Navigator.pushReplacement(
@@ -388,8 +389,8 @@ class AuthService {
       } else if (response.statusCode == 300) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Incorrect code ',
           btnCancelOnPress: () {},

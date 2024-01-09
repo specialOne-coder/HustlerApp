@@ -57,6 +57,7 @@ class NumberPage extends StatelessWidget {
                               } else if (value.length < 8) {
                                 return '8 chiffres ';
                               }
+                              return null;
                             },
                             style: TextStyle(
                               color: Colors.black,

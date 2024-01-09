@@ -128,7 +128,7 @@ class DateTravailPage extends StatelessWidget {
                           alerteCreationViewModel.alerteurId =
                               alerte.alerteurId;
                           alerteCreationViewModel.titre = alerte.titre;
-                          alerteCreationViewModel.message = alerte.message;
+                          alerteCreationViewModel.alerteMessage = alerte.alerteMessage;
                           alerteCreationViewModel.service = alerte.service;
                           alerteCreationViewModel.position = alerte.position;
                           alerteCreationViewModel.prix = alerte.prix;

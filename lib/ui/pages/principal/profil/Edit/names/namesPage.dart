@@ -59,6 +59,7 @@ class NamesPage extends StatelessWidget {
                               } else if (value.length < 5) {
                                 return 'Au minimum 5 caractères ';
                               }
+                              return null;
                             },
                             style: TextStyle(
                               color: Colors.black,
@@ -87,6 +88,7 @@ class NamesPage extends StatelessWidget {
                               } else if (value.length < 3) {
                                 return 'Au minimum 5 caractères ';
                               }
+                              return null;
                             },
                             style: TextStyle(
                               color: Colors.black,

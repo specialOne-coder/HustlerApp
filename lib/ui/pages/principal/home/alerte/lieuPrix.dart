@@ -105,6 +105,7 @@ class LieuPrix extends StatelessWidget {
                               } else if (value.length < 5) {
                                 return 'Au minimum 5 caractères ';
                               }
+                              return null;
                             },
                             maxLines: null,
                             decoration: InputDecoration(
@@ -142,6 +143,7 @@ class LieuPrix extends StatelessWidget {
                               if (value!.isEmpty) {
                                 return 'Donner un prix a votre annonce';
                               }
+                              return null;
                             },
                             maxLines: null,
                             decoration: InputDecoration(
@@ -183,7 +185,7 @@ class LieuPrix extends StatelessWidget {
                           alerteCreationViewModel.alerteurId =
                               alerte.alerteurId;
                           alerteCreationViewModel.titre = alerte.titre;
-                          alerteCreationViewModel.message = alerte.message;
+                          alerteCreationViewModel.alerteMessage = alerte.alerteMessage;
                           alerteCreationViewModel.service = alerte.service;
                           alerteCreationViewModel.position = model.position;
                           alerteCreationViewModel.prix = model.prix;

@@ -186,14 +186,14 @@ class InformationsPage extends StatelessWidget {
                                           height: 46,
                                           width: 46,
                                           // ignore: deprecated_member_use
-                                          child: FlatButton(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(50),
-                                              side: BorderSide(
-                                                  color: Colors.white),
-                                            ),
-                                            color: Colors.grey[200],
+                                          child: TextButton(
+                                            // shape: RoundedRectangleBorder(
+                                            //   borderRadius:
+                                            //       BorderRadius.circular(50),
+                                            //   side: BorderSide(
+                                            //       color: Colors.white),
+                                            // ),
+                                            // color: Colors.grey[200],
                                             onPressed: () {
                                               Get.bottomSheet(
                                                 Container(

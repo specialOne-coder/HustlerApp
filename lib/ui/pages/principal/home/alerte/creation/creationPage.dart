@@ -19,7 +19,7 @@ class AlerteCreationPage extends StatelessWidget {
         'alerteurId': alerte.alerteurId.toString(),
         'service': alerte.service.toString(),
         'titre': alerte.titre.toString(),
-        'message': alerte.message.toString(),
+        'message': alerte.alerteMessage.toString(),
         'picture': alerte.picture.toString(),
         'dateTaf': alerte.dateTaf.toString(),
         'position': alerte.position.toString(),

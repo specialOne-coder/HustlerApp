@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ferdio/Desktop/ieLab/hustler-mob-mobile/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/ferdinand/Perso/Cours/HustlerApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/ferdio/Desktop/ieLab/hustler-mob-mobile/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/ferdinand/Perso/Cours/HustlerApp/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

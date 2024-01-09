@@ -145,6 +145,7 @@ class TitreDescAlerte extends StatelessWidget {
                               } else if (value.length < 12) {
                                 return 'Au minimum 12 caractères ';
                               }
+                              return null;
                             },
                             maxLines: null,
                             decoration: InputDecoration(
@@ -175,9 +176,9 @@ class TitreDescAlerte extends StatelessWidget {
                           child: TextFormField(
                             keyboardType: TextInputType.multiline,
                             controller:
-                                TextEditingController(text: model.message),
+                                TextEditingController(text: model.alerteMessage),
                             onChanged: (value) {
-                              model.message = value;
+                              model.alerteMessage = value;
                             },
                             validator: (value) {
                               if (value!.isEmpty) {
@@ -185,6 +186,7 @@ class TitreDescAlerte extends StatelessWidget {
                               } else if (value.length < 45) {
                                 return 'Encore quelques mots ';
                               }
+                              return null;
                             },
                             maxLines: null,
                             decoration: InputDecoration(
@@ -226,7 +228,7 @@ class TitreDescAlerte extends StatelessWidget {
                             model.formKey.currentState!.validate()) {
                           alerteCreationViewModel.alerteurId = id.toString();
                           alerteCreationViewModel.titre = model.titre;
-                          alerteCreationViewModel.message = model.message;
+                          alerteCreationViewModel.alerteMessage = model.alerteMessage;
                           alerteCreationViewModel.service = model.service;
                           Navigator.push(
                               context,

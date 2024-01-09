@@ -63,6 +63,7 @@ class BioPage extends StatelessWidget {
                               } else if (value.length < 20) {
                                 return 'Au minimum 20 caractères ';
                               }
+                              return null;
                             },
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(

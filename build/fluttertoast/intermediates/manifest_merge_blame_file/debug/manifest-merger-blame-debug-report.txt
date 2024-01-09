@@ -2,7 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="io.github.ponnamkarthik.toast.fluttertoast" >
 4
-5    <uses-sdk android:minSdkVersion="16" />
-5-->/usr/lib/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.7/android/src/main/AndroidManifest.xml
+5    <uses-sdk android:minSdkVersion="21" />
+5-->/home/ferdinand/.pub-cache/hosted/pub.dev/fluttertoast-8.2.4/android/src/main/AndroidManifest.xml
 6
 7</manifest>

@@ -61,6 +61,7 @@ class AdresseModifyPage extends StatelessWidget {
                               if (value!.isEmpty) {
                                 return 'Entrer votre adresse';
                               }
+                              return null;
                             },
                             maxLines: null,
                             decoration: InputDecoration(

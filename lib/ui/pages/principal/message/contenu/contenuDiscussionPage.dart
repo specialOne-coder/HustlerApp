@@ -104,7 +104,7 @@ class DiscussionContenuPage extends StatelessWidget {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                              shape: CircleBorder(), primary: kPrimaryColor),
+                              shape: CircleBorder(), backgroundColor: kPrimaryColor),
                         ),
                       )
                     ],

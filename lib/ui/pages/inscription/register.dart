@@ -123,6 +123,7 @@ class _RegisterState extends State<Register> {
                             } else if (value.length < 8) {
                               return 'Au minimum 8 caractères ';
                             }
+                            return null;
                           },
                           decoration: InputDecoration(
                               hintText: "choisissez un mot de passe",

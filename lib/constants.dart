@@ -12,5 +12,5 @@ Color kPrimaryColor = Color(hexColor('#6C63FF'));
 //Color kPrimaryColor = Colors.black;
 Color kPrimaryLightColor = Color(hexColor('##eeeeee'));
 const String version = '1.0.0';
-const String baseUrl = 'http://192.168.43.49:5000';
-const String server = 'http://192.168.43.49:5000/hustler';
+const String baseUrl = 'http://192.168.1.17:5000';
+const String server = 'http://192.168.1.17:5000/hustler';

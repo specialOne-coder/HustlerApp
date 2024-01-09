@@ -91,8 +91,8 @@ class UserService {
       if (response.statusCode == 200) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Success',
           desc: 'Informations mises à jour ',
           btnOkOnPress: () {},
@@ -101,8 +101,8 @@ class UserService {
         final parsed = jsonDecode(response.body);
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: '${parsed["pseudo"] + parsed["email"] + parsed["phone"]} ',
           btnCancelOnPress: () {},
@@ -112,8 +112,8 @@ class UserService {
       print('Erreur : ${e.toString()}');
       AwesomeDialog(
         context: context,
-        dialogType: DialogType.NO_HEADER,
-        animType: AnimType.TOPSLIDE,
+        dialogType: DialogType.noHeader,
+        animType: AnimType.topSlide,
         title: 'Erreur',
         desc: 'Connection Error ',
         btnCancelOnPress: () {},
@@ -153,8 +153,8 @@ class UserService {
       } else if (response.statusCode == 400) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Ce email existe déja',
           btnCancelOnPress: () {},
@@ -162,8 +162,8 @@ class UserService {
       } else {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Email connection Error ',
           btnCancelOnPress: () {},
@@ -199,8 +199,8 @@ class UserService {
       if (response.statusCode == 200) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Success',
           desc: 'votre email a été mise à jour ',
           btnOkOnPress: () {},
@@ -208,8 +208,8 @@ class UserService {
       } else if (response.statusCode == 300) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Incorrect code ',
           btnCancelOnPress: () {},
@@ -246,8 +246,8 @@ class UserService {
       if (response.statusCode == 200) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Success',
           desc: 'votre mot de passe a été mis à jour  ',
           btnOkOnPress: () {
@@ -261,8 +261,8 @@ class UserService {
       } else if (response.statusCode == 300) {
         AwesomeDialog(
           context: context,
-          dialogType: DialogType.NO_HEADER,
-          animType: AnimType.TOPSLIDE,
+          dialogType: DialogType.noHeader,
+          animType: AnimType.topSlide,
           title: 'Erreur',
           desc: 'Incorrect password ',
           btnCancelOnPress: () {},

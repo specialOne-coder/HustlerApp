@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/example/hustler_mob/BuildConfig.java
- com.example.hustler_mob.BuildConfig

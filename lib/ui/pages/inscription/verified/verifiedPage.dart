@@ -74,6 +74,7 @@ class VerifiedPage extends StatelessWidget {
                                           } else if (value.length < 6) {
                                             return '6 chiffres ';
                                           }
+                                          return null;
                                         },
                                         decoration: InputDecoration(
                                             hintText:

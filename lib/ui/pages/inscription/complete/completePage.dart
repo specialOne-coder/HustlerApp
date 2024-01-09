@@ -82,6 +82,7 @@ class CompletePage extends StatelessWidget {
                                   } else if (value.length < 5) {
                                     return 'Au minimum 5 caractères ';
                                   }
+                                  return null;
                                 },
                                 decoration: InputDecoration(
                                     hintText: "Nom d'utilisateur",

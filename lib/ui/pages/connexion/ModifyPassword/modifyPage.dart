@@ -84,6 +84,7 @@ class ModifyPage extends StatelessWidget {
                                           } else if (value.length < 6) {
                                             return '6 chiffres ';
                                           }
+                                          return null;
                                         },
                                         decoration: InputDecoration(
                                             hintText:
@@ -151,6 +152,7 @@ class ModifyPage extends StatelessWidget {
                                   } else if (value.length < 8) {
                                     return 'Au minimum 8 caractères ';
                                   }
+                                  return null;
                                 },
                                 decoration: InputDecoration(
                                     hintText:

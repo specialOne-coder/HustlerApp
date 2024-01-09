@@ -56,6 +56,7 @@ class PasswordPage extends StatelessWidget {
                               } else if (value.length < 8) {
                                 return 'Minimum 8 caractères';
                               }
+                              return null;
                             },
                             style: TextStyle(
                               color: Colors.black,
@@ -87,6 +88,7 @@ class PasswordPage extends StatelessWidget {
                               } else if (value.length < 8) {
                                 return 'Minimum 8 caractères';
                               }
+                              return null;
                             },
                             style: TextStyle(
                               color: Colors.black,
@@ -121,6 +123,7 @@ class PasswordPage extends StatelessWidget {
                                   model.confirmNewPass) {
                                 return 'les nouveaux mots de passe ne sont pas identiques';
                               }
+                              return null;
                             },
                             style: TextStyle(
                               color: Colors.black,

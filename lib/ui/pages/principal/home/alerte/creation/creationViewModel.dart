@@ -24,7 +24,7 @@ class AlerteCreationViewModel extends BaseViewModel {
   String titre = "";
   String picture = '';
   String email = '';
-  String message = '';
+  String alerteMessage = '';
   String service = '';
   String dateAjout = '';
   String dateTaf = '';

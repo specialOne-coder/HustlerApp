@@ -129,12 +129,15 @@ class PhotoChoicePage extends StatelessWidget {
                                   height: 46,
                                   width: 46,
                                   // ignore: deprecated_member_use
-                                  child: FlatButton(
+                                  child: TextButton(
+                                    style: TextButton.styleFrom(
+                                     
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50),
                                       side: BorderSide(color: Colors.white),
                                     ),
-                                    color: Colors.grey[200],
+                                    backgroundColor: Colors.grey[200],
+                                    ),
                                     onPressed: () {
                                       Get.bottomSheet(
                                         Container(
@@ -214,7 +217,7 @@ class PhotoChoicePage extends StatelessWidget {
                       onPressed: () {
                         alerteCreationViewModel.alerteurId = alerte.alerteurId;
                         alerteCreationViewModel.titre = alerte.titre;
-                        alerteCreationViewModel.message = alerte.message;
+                        alerteCreationViewModel.alerteMessage = alerte.alerteMessage;
                         alerteCreationViewModel.service = alerte.service;
                         alerteCreationViewModel.position = alerte.position;
                         alerteCreationViewModel.prix = alerte.prix;
